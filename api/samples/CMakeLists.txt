@@ -230,6 +230,7 @@ if (X86) # FIXME i#1551, i#1569: port to ARM and AArch64
   add_sample_client(prefetch    "prefetch.c"      "drmgr")
   if (NOT WIN32)
     add_sample_client(ssljack     "ssljack.c"       "drmgr;drwrap")
+    add_sample_client(soundcore   "soundcore.c"     "drmgr;drwrap")
   endif (NOT WIN32)
   # dr_insert_mbr_instrumentation is NYI
   add_sample_client(modxfer     "modxfer.c;utils.c"     "drmgr;drreg;drx")
@@ -251,6 +252,7 @@ set(srcs ${srcs} "utils.h")     # NON-PUBLIC
 if (WIN32)
   # This client is Windows-only.
   add_sample_client(stats     "stats.c;utils.c"         "drmgr;drreg;drx")
+  add_sample_client(soundcore "soundcore-windows.c"     "drmgr;drwrap")
 
   # XXX i#893: drwrap's asm isn't SEH compliant.
   _DR_append_property_string(TARGET wrap LINK_FLAGS "/safeseh:no")

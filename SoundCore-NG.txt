@@ -1,0 +1,5 @@
+Tested with mpg123 1.24.0 with ALSA and PulseAudio output.
+
+PulseAudio support is in progress.
+
+Also see https://github.com/kholia/SoundCore project.
