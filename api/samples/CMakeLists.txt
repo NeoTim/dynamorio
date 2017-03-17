@@ -230,6 +230,7 @@ if (X86) # FIXME i#1551, i#1569: port to ARM and AArch64
   add_sample_client(prefetch    "prefetch.c"      "drmgr")
   if (NOT WIN32)
     add_sample_client(ssljack     "ssljack.c"       "drmgr;drwrap")
+    add_sample_client(nop         "nop.c"           "drmgr;drwrap")
   endif (NOT WIN32)
   # dr_insert_mbr_instrumentation is NYI
   add_sample_client(modxfer     "modxfer.c;utils.c"     "drmgr;drreg;drx")
